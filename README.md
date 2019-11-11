@@ -10,6 +10,10 @@
 
 存放无状态视图组件(styledButton,styledText之类的)
 
+### components/layout
+
+存放layout组件
+
 ### contants
 
 存放常量
@@ -34,7 +38,7 @@
 
 存放通用方法
 
-#### service/api
+### service/api
 
 存放api请求
 
