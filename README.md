@@ -54,4 +54,12 @@
   redux, react-redux, moment, axios, redux-logger, redux-thunk
 
 用到的其他react-native插件：
-  react-native-paper
+  react-native-ui-kitten
+
+## 注释
+
+作用 + 参数 + 返回值
+
+## todos
+
+错误提示放到一起 模块划分 不同app不同project 共享方法的目录
