@@ -1,27 +1,52 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
-import { ExpoLinksView } from '@expo/samples';
+import { View, StyleSheet,Text} from 'react-native';
+import {CheckBox} from 'react-native-ui-kitten'
 
 export default function LinksScreen() {
+  state={
+    language: null
+  }
   return (
-    <ScrollView style={styles.container}>
-      {/**
-       * Go ahead and delete ExpoLinksView and replace it with your content;
-       * we just wanted to provide you with some helpful links.
-       */}
-      <ExpoLinksView />
-    </ScrollView>
+    <View>
+      <Text style={styles.label}>Virgo's Resurrection</Text>
+      <View style = {styles.line}></View>
+      <View >
+         <Text style={styles.lancho} >CHOOSE LANGUAGE</Text>
+
+      </View>
+        <CheckBox
+          style={styles.checkbox}
+          text='ENGLISH'
+          // checked={this.state.checked1}
+          // onChange={this.onChecked1Change}
+        />
+    </View>
   );
 }
 
-LinksScreen.navigationOptions = {
-  title: 'Links',
-};
+
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 15,
-    backgroundColor: '#fff',
-  },
+label:{
+  fontSize: 22,
+  textAlign: 'center',
+  fontWeight:'300'
+},
+line:{
+  marginTop: 15,
+  marginLeft:44,
+  borderBottomColor:'black',
+  borderBottomWidth: 2,
+  width:'80%',
+},
+lancho:{
+  marginTop: 15,
+  marginLeft:44,
+  fontSize:18,
+  fontWeight: '100',
+},
+checkbox:{
+  marginTop: 15,
+  marginLeft:44,
+}
 });
