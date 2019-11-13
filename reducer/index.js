@@ -1,4 +1,4 @@
 import { combineReducers } from "redux";
-import demoReducer from "./demoReducer";
+import localeReducer from "./localeReducer";
 
-export default combineReducers({ demoReducer });
+export default combineReducers({ localeReducer });
