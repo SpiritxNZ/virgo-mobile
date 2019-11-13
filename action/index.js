@@ -1,1 +1,1 @@
-export const scan = data => ({ type: "scan", data });
+export const setLocale = locale => ({ type: locale });
