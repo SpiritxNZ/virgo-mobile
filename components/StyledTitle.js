@@ -18,9 +18,8 @@ const styles = StyleSheet.create({
   },
   line: {
     marginTop: 15,
-    marginLeft: 44,
     borderBottomColor: "black",
     borderBottomWidth: 2,
-    width: "80%"
+    width: "100%"
   }
 });

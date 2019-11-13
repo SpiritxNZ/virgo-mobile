@@ -1,11 +1,17 @@
-const localeReducer = (state = { locale: null }, action) => {
+const localeReducer = (
+  state = { localeIndex: null, position: "Auckland" },
+  action
+) => {
   switch (action.type) {
-    case "en":
-      return Object.assign({}, state, { locale: "en" });
-    case "ch":
-      return Object.assign({}, state, { locale: "ch" });
+    case "locale":
+      return Object.assign({}, state, { localeIndex: action.data });
+    case "position":
+      return Object.assign({}, state, { position: action.data });
     default:
-      return Object.assign({}, state, { locale: "en" });
+      return Object.assign({}, state, {
+        localeIndex: null,
+        position: "Auckland"
+      });
   }
 };
 
