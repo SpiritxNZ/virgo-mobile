@@ -11,7 +11,7 @@ export default function StyledTitle() {
 }
 
 const styles = StyleSheet.create({
-  label: {
+  label: {   
     fontSize: 22,
     textAlign: "center",
     fontWeight: "300"
