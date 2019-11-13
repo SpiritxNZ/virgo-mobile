@@ -1,8 +1,8 @@
-// import LocaleScreen from "../screens/LocaleScreen";
-// import { createStackNavigator } from "react-navigation";
+import LocaleScreen from "../screens/Locale/LocaleScreen";
+import { createStackNavigator } from "react-navigation";
 
-// const AuthStack = createStackNavigator({
-//   Locale: LocaleScreen
-// });
+const LocaleNavigator = createStackNavigator({
+  LocaleScreen: LocaleScreen
+});
 
-// export default LocaleStack;
+export default LocaleNavigator;

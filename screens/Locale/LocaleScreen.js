@@ -21,8 +21,8 @@ class LoginScreen extends Component {
   }
 }
 
-LoginScreen.navigationOptions = {
-  title: "Login"
-};
+// LoginScreen.navigationOptions = {
+//   title: "Login"
+// };
 
 export default LoginScreen;
