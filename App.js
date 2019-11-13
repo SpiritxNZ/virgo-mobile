@@ -6,8 +6,9 @@ import { Platform, StatusBar, StyleSheet, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Provider } from "react-redux";
 import store from "./store";
-
 import AppNavigator from "./navigation/AppNavigator";
+import { mapping, light as lightTheme } from "@eva-design/eva";
+import { ApplicationProvider, Layout, Text } from "react-native-ui-kitten";
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
@@ -23,10 +24,12 @@ export default function App(props) {
   } else {
     return (
       <Provider store={store}>
-        <View style={styles.container}>
-          {Platform.OS === "ios" && <StatusBar barStyle="default" />}
-          <AppNavigator />
-        </View>
+        <ApplicationProvider mapping={mapping} theme={lightTheme}>
+          <View style={styles.container}>
+            {Platform.OS === "ios" && <StatusBar barStyle="default" />}
+            <AppNavigator />
+          </View>
+        </ApplicationProvider>
       </Provider>
     );
   }

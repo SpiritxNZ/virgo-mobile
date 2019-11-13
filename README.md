@@ -50,7 +50,7 @@
 
 这是一个用expo管理的react native项目，尽量使用expo自带的react native插件。状态管理尽量用redux。新加插件时在下面列出
 
-用到的expo插件: 
+用到的expo插件:  
   expo-localization
 
 用到的其他react插件：
