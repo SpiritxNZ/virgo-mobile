@@ -1,27 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, StyleSheet,Text} from 'react-native';
-import {CheckBox} from 'react-native-ui-kitten'
+import {Radio, RadioGroup} from 'react-native-ui-kitten'
+import StyledTitle from '../components/StyledTitle';
+import {connect} from 'react-redux'
 
-export default function LinksScreen() {
-  state={
-    language: null
-  }
-  return (
+class  LinksScreen extends Component {
+  state = {
+    selectedIndex: 0,
+  };
+
+  onChange = (selectedIndex) => {
+    this.setState({ selectedIndex });
+  };
+
+  render(){
+     return (
     <View>
-      <Text style={styles.label}>Virgo's Resurrection</Text>
-      <View style = {styles.line}></View>
+      <StyledTitle/>
+
       <View >
          <Text style={styles.lancho} >CHOOSE LANGUAGE</Text>
-
       </View>
-        <CheckBox
-          style={styles.checkbox}
-          text='ENGLISH'
-          // checked={this.state.checked1}
-          // onChange={this.onChecked1Change}
-        />
+
+      <RadioGroup
+        selectedIndex={this.state.selectedIndex}
+        onChange={this.onChange}>
+        <Radio style={styles.radio} text='ENGLISH' />
+        <Radio style={styles.radio} text='中文' />
+      </RadioGroup>
+
     </View>
   );
+  }
+ 
 }
 
 
@@ -45,8 +56,21 @@ lancho:{
   fontSize:18,
   fontWeight: '100',
 },
-checkbox:{
-  marginTop: 15,
+radio: {
   marginLeft:44,
-}
+  marginVertical: 4,
+},
 });
+
+const mapStateToProps = () =>{
+  return {
+  
+  }
+}
+
+const mapDispatchToProps = () =>{
+
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(LinksScreen);
