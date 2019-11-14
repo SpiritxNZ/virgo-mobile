@@ -9,8 +9,9 @@ import store from "./store";
 import AppNavigator from "./navigation/AppNavigator";
 import { mapping, light as lightTheme } from "@eva-design/eva";
 import { ApplicationProvider, Layout, Text } from "react-native-ui-kitten";
+import "./i18n";
 
-export default function App(props) {
+function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
 
   if (!isLoadingComplete && !props.skipLoadingScreen) {
@@ -34,6 +35,8 @@ export default function App(props) {
     );
   }
 }
+
+export default App;
 
 async function loadResourcesAsync() {
   await Promise.all([

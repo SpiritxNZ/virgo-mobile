@@ -54,7 +54,7 @@
   expo-localization
 
 用到的其他react插件：
-  redux, react-redux, moment, axios, redux-logger, redux-thunk
+  redux, react-redux, moment, axios, redux-logger, redux-thunk, react-i18next, i18next
 
 用到的其他react-native插件：
   react-native-ui-kitten, react-native-css

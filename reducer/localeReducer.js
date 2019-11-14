@@ -1,5 +1,5 @@
 const localeReducer = (
-  state = { localeIndex: null, position: "Auckland" },
+  state = { localeIndex: 0, position: "Auckland" },
   action
 ) => {
   switch (action.type) {
@@ -9,7 +9,7 @@ const localeReducer = (
       return Object.assign({}, state, { position: action.data });
     default:
       return Object.assign({}, state, {
-        localeIndex: null,
+        localeIndex: 0,
         position: "Auckland"
       });
   }

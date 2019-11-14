@@ -4,41 +4,83 @@ import { Radio, RadioGroup, CheckBox, Button } from "react-native-ui-kitten";
 import StyledTitle from "../../components/StyledTitle";
 import { connect } from "react-redux";
 import { localeList } from "../../constants/locale/setting";
-import { setLocale, setLocation } from "../../action/index";
+import { setLocale } from "../../action/index";
+import { Notifications } from "expo";
+import * as Permissions from "expo-permissions";
+import * as Localization from "expo-localization";
+import { withTranslation } from "react-i18next";
+import i18next from "i18next";
 
 class LocaleScreen extends Component {
   state = {
-    checkAuk: true,
-    notification: false
+    checkAuk: true
   };
 
   static navigationOptions = {
     header: null
   };
 
-  radioOnChange = selectedIndex => {
-    this.setState({ selectedIndex });
+  registerForPushNotificationsAsync = async () => {
+    const { status: existingStatus } = await Permissions.getAsync(
+      Permissions.NOTIFICATIONS
+    );
+    let finalStatus = existingStatus;
+    if (existingStatus !== "granted") {
+      const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
+      finalStatus = status;
+    }
+    if (finalStatus !== "granted") {
+      return;
+    }
+    const token = await Notifications.getExpoPushTokenAsync();
+
+    // return fetch(PUSH_ENDPOINT, {
+    //   method: 'POST',
+    //   headers: {
+    //     Accept: 'application/json',
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     token: {
+    //       value: token,
+    //     },
+    //     user: {
+    //       username: 'Brent',
+    //     },
+    //   }),
+    // });
   };
 
-  storeOnChange = checkAuk => {
-    this.setState({ checkAuk });
+  radioOnChange = index => {
+    this.props.setLocale(index);
+    if (index === 0) {
+      i18next.changeLanguage("en");
+    } else if (index === 1) {
+      i18next.changeLanguage("ch");
+    } else {
+      i18next.changeLanguage("en");
+    }
   };
 
-  notificationOnChange = notification => {
-    this.setState({ notification });
+  componentDidMount = () => {
+    this.registerForPushNotificationsAsync();
   };
+
   render() {
+    const { t } = this.props;
     return (
       <View style={styles.container}>
-        <StyledTitle />
+        <StyledTitle title="Virgo's Resurrection" />
 
         <View>
-          <Text style={styles.chooseOptions}>CHOOSE LANGUAGE</Text>
+          <Text style={styles.chooseOptions}>{t("localePage.cl")}</Text>
         </View>
 
         <RadioGroup
           selectedIndex={this.props.localeIndex}
-          onChange={index => this.props.setLocale(index)}
+          onChange={index => {
+            this.radioOnChange(index);
+          }}
         >
           {localeList.map((el, index) => (
             <Radio style={styles.item} text={el} key={index} />
@@ -46,18 +88,12 @@ class LocaleScreen extends Component {
         </RadioGroup>
 
         <View>
-          <Text style={styles.chooseOptions}>SELECT YOUR STORE</Text>
+          <Text style={styles.chooseOptions}>{t("localePage.sys")}</Text>
           <CheckBox
             style={styles.item}
             text="AUCKLAND"
             checked={this.state.checkAuk}
             onChange={this.storeOnChange}
-          />
-          <CheckBox
-            style={styles.item}
-            text="Enable notification"
-            checked={this.state.notification}
-            onChange={this.notificationOnChange}
           />
         </View>
 
@@ -68,7 +104,7 @@ class LocaleScreen extends Component {
             this.props.navigation.navigate("Main");
           }}
         >
-          Confirm
+          {t("confirm")}
         </Button>
       </View>
     );
@@ -108,5 +144,6 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(LocaleScreen);
-// export default LocaleScreen;
+export default withTranslation()(
+  connect(mapStateToProps, mapDispatchToProps)(LocaleScreen)
+);
