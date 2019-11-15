@@ -54,10 +54,10 @@
   expo-localization
 
 用到的其他react插件：
-  redux, react-redux, moment, axios, redux-logger, redux-thunk, react-i18next, i18next
+  redux, react-redux, moment, redux-logger, redux-thunk, react-i18next, i18next,
 
 用到的其他react-native插件：
-  react-native-ui-kitten, react-native-css
+  react-native-ui-kitten, react-native-css, react-native-swiper
 
 ## 注释
 
@@ -66,13 +66,13 @@
 ## todos
 
 错误提示放到一起 模块划分 不同app不同project 共享方法的目录
+下面两个按钮，主页轮播
 
 添加stack
 
 1. 选择语言stack
 2. 主stack
 3. 商城stack
-4. 登录stack
 
 ## 需要确认的
 

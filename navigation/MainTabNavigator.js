@@ -7,6 +7,7 @@ import {
 
 import HomeScreen from "../screens/HomeScreen";
 import LinksScreen from "../screens/LinksScreen";
+import DemoScreen from "../screens/DemoScreen";
 
 const config = Platform.select({
   web: { headerMode: "screen" },
@@ -28,7 +29,8 @@ HomeStack.path = "";
 
 const LinksStack = createStackNavigator(
   {
-    Links: LinksScreen
+    Links: LinksScreen,
+    Demo: DemoScreen
   },
   config
 );

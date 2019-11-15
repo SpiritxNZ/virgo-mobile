@@ -1,6 +1,6 @@
 export const en = {
   translation: {
-    confirm: "c",
+    confirm: "confirm",
     localePage: {
       cl: "Choose Language",
       sys: "Select Your Store"

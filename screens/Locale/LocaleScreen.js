@@ -110,8 +110,6 @@ class LocaleScreen extends Component {
         >
           {t("confirm")}
         </Button>
-
-        <Button>push</Button>
       </MarginTop>
     );
   }
