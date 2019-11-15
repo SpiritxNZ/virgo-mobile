@@ -4,6 +4,7 @@ import MarginTop from "../components/layout/MarginTop";
 import HomeHeader from "../components/home/HomeHeader";
 import HomeImageRow from "../components/home/HomeImageRow";
 import HomeSwiper from "../components/home/HomeSwiper";
+import BottomBar from "../components/BottomBar";
 
 class HomeScreen extends Component {
   static navigationOptions = {
@@ -12,11 +13,13 @@ class HomeScreen extends Component {
 
   render() {
     return (
-      <MarginTop style={styles.container}>
-        <HomeHeader />
-        <HomeImageRow {...this.props} />
-        <HomeSwiper {...this.props} style={styles.swiper} />
-      </MarginTop>
+      <BottomBar>
+        <MarginTop style={styles.container}>
+          <HomeHeader />
+          <HomeImageRow {...this.props} />
+          <HomeSwiper {...this.props} style={styles.swiper} />
+        </MarginTop>
+      </BottomBar>
     );
   }
 }

@@ -8,7 +8,7 @@ const HomeImageRow = props => {
     <Row style={[props.style, styles.imageRow]}>
       <TouchableHighlight
         onPress={() => {
-          props.navigation.navigate("Demo");
+          props.navigation.navigate("Links");
         }}
       >
         <Avatar
@@ -20,7 +20,7 @@ const HomeImageRow = props => {
       </TouchableHighlight>
       <TouchableHighlight
         onPress={() => {
-          props.navigation.navigate("Demo");
+          props.navigation.navigate("Links");
         }}
       >
         <Avatar
@@ -32,7 +32,7 @@ const HomeImageRow = props => {
       </TouchableHighlight>
       <TouchableHighlight
         onPress={() => {
-          props.navigation.navigate("Demo");
+          props.navigation.navigate("Links");
         }}
       >
         <Avatar
@@ -44,7 +44,7 @@ const HomeImageRow = props => {
       </TouchableHighlight>
       <TouchableHighlight
         onPress={() => {
-          props.navigation.navigate("Demo");
+          props.navigation.navigate("Links");
         }}
       >
         <Avatar
@@ -56,7 +56,7 @@ const HomeImageRow = props => {
       </TouchableHighlight>
       <TouchableHighlight
         onPress={() => {
-          props.navigation.navigate("Demo");
+          props.navigation.navigate("Links");
         }}
       >
         <Avatar

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, Dimensions } from "react-native";
 import { Text, Button, Layout } from "react-native-ui-kitten";
 import RoundBorder from "../components/layout/RoundBorder";
+import BottomBar from "../components/BottomBar";
 
 class LinksScreen extends Component {
   static navigationOptions = {
@@ -11,7 +12,7 @@ class LinksScreen extends Component {
 
   render() {
     return (
-      <Layout>
+      <BottomBar>
         <RoundBorder>
           <Text>Links</Text>
           <Button
@@ -19,10 +20,17 @@ class LinksScreen extends Component {
               this.props.navigation.navigate("Locale");
             }}
           >
-            locale
+            Locale
+          </Button>
+          <Button
+            onPress={() => {
+              this.props.navigation.navigate("Home");
+            }}
+          >
+            Home
           </Button>
         </RoundBorder>
-      </Layout>
+      </BottomBar>
     );
   }
 }
