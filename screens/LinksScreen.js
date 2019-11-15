@@ -1,12 +1,24 @@
 import React, { Component } from "react";
-import { Layout, Text } from "react-native-ui-kitten";
+import { Text, Button } from "react-native-ui-kitten";
+import RoundBorder from "../components/layout/RoundBorder";
 
 class LinksScreen extends Component {
+  static navigationOptions = {
+    header: null
+  };
+
   render() {
     return (
-      <Layout>
+      <RoundBorder>
         <Text>Links</Text>
-      </Layout>
+        <Button
+          onPress={() => {
+            this.props.navigation.navigate("Locale");
+          }}
+        >
+          locale
+        </Button>
+      </RoundBorder>
     );
   }
 }

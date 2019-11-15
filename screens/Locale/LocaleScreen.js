@@ -1,23 +1,25 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Text } from "react-native";
-import { Radio, RadioGroup, CheckBox, Button } from "react-native-ui-kitten";
+import { StyleSheet, Text } from "react-native";
+import {
+  Radio,
+  RadioGroup,
+  CheckBox,
+  Button,
+  Layout
+} from "react-native-ui-kitten";
 import StyledTitle from "../../components/StyledTitle";
 import { connect } from "react-redux";
 import { localeList } from "../../constants/locale/setting";
 import { setLocale } from "../../action/index";
 import { Notifications } from "expo";
 import * as Permissions from "expo-permissions";
-import * as Localization from "expo-localization";
 import { withTranslation } from "react-i18next";
 import i18next from "i18next";
+import MarginTop from "../../components/layout/MarginTop";
 
 class LocaleScreen extends Component {
   state = {
     checkAuk: true
-  };
-
-  static navigationOptions = {
-    header: null
   };
 
   registerForPushNotificationsAsync = async () => {
@@ -64,17 +66,19 @@ class LocaleScreen extends Component {
 
   componentDidMount = () => {
     this.registerForPushNotificationsAsync();
+
+    console.log(this.props);
   };
 
   render() {
     const { t } = this.props;
     return (
-      <View style={styles.container}>
+      <MarginTop style={styles.container}>
         <StyledTitle title="Virgo's Resurrection" />
 
-        <View>
+        <Layout>
           <Text style={styles.chooseOptions}>{t("localePage.cl")}</Text>
-        </View>
+        </Layout>
 
         <RadioGroup
           selectedIndex={this.props.localeIndex}
@@ -87,7 +91,7 @@ class LocaleScreen extends Component {
           ))}
         </RadioGroup>
 
-        <View>
+        <Layout>
           <Text style={styles.chooseOptions}>{t("localePage.sys")}</Text>
           <CheckBox
             style={styles.item}
@@ -95,7 +99,7 @@ class LocaleScreen extends Component {
             checked={this.state.checkAuk}
             onChange={this.storeOnChange}
           />
-        </View>
+        </Layout>
 
         <Button
           size="medium"
@@ -106,14 +110,15 @@ class LocaleScreen extends Component {
         >
           {t("confirm")}
         </Button>
-      </View>
+
+        <Button>push</Button>
+      </MarginTop>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 70,
     marginHorizontal: 44
   },
   chooseOptions: {

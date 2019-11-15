@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet } from "react-native";
 import { Layout, Avatar, Button } from "react-native-ui-kitten";
+import MarginTop from "../components/layout/MarginTop";
 
 class HomeScreen extends Component {
   static navigationOptions = {
@@ -8,7 +9,7 @@ class HomeScreen extends Component {
   };
   render() {
     return (
-      <Layout style={styles.container}>
+      <MarginTop style={styles.container}>
         <Layout style={[styles.row, styles.header]}>
           <Button size="small">Order</Button>
           <Layout style={styles.horizontalBar}></Layout>
@@ -52,14 +53,13 @@ class HomeScreen extends Component {
             }}
           />
         </Layout>
-      </Layout>
+      </MarginTop>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 60,
     paddingVertical: 8,
     paddingHorizontal: 12
   },
