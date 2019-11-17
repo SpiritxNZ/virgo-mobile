@@ -52,7 +52,6 @@
 
 import HomeScreen from "../screens/HomeScreen";
 import LinksScreen from "../screens/LinksScreen";
-import DemoScreen from "../screens/DemoScreen";
 import { createStackNavigator, createSwitchNavigator } from "react-navigation";
 
 const MainTabNavigator = createStackNavigator({
@@ -63,9 +62,6 @@ const MainTabNavigator = createStackNavigator({
   Links: {
     screen: LinksScreen,
     navigationOptions: { header: null }
-  },
-  Demo: {
-    screen: DemoScreen
   }
 });
 
