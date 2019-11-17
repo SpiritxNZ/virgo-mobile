@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, ScrollView } from "react-native";
 import { Layout, Button } from "react-native-ui-kitten";
-import Row from "../components/layout/Row";
+import Row from "./layout/Row";
 import layout from "../constants/Layout";
 
 const BottomBar = props => {

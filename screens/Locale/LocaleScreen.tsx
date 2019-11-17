@@ -17,11 +17,7 @@ import { withTranslation } from "react-i18next";
 import i18next from "i18next";
 import MarginTop from "../../components/layout/MarginTop";
 
-class LocaleScreen extends Component {
-  state = {
-    checkAuk: true
-  };
-
+class LocaleScreen extends Component<any, any> {
   registerForPushNotificationsAsync = async () => {
     const { status: existingStatus } = await Permissions.getAsync(
       Permissions.NOTIFICATIONS
@@ -66,7 +62,6 @@ class LocaleScreen extends Component {
 
   componentDidMount = () => {
     this.registerForPushNotificationsAsync();
-
     console.log(this.props);
   };
 
@@ -93,12 +88,7 @@ class LocaleScreen extends Component {
 
         <Layout>
           <Text style={styles.chooseOptions}>{t("localePage.sys")}</Text>
-          <CheckBox
-            style={styles.item}
-            text="AUCKLAND"
-            checked={this.state.checkAuk}
-            onChange={this.storeOnChange}
-          />
+          <CheckBox style={styles.item} text="AUCKLAND" checked />
         </Layout>
 
         <Button

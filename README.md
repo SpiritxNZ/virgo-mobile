@@ -57,13 +57,13 @@
   redux, react-redux, moment, redux-logger, redux-thunk, react-i18next, i18next,
 
 用到的其他react-native插件：
-  react-native-ui-kitten, react-native-css, react-native-swiper
+  react-native-ui-kitten, react-native-swiper, react-navigation
 
 ## 注释
 
 作用 + 参数 + 返回值
 
-## todos
+## todoswefaqf
 
 错误提示放到一起 模块划分 不同app不同project 共享方法的目录
 下面两个按钮，主页轮播
@@ -83,3 +83,4 @@
 5. 有些按钮比较小在手机上可能不好点
 
 6. 选择语言页面的Enable notification是要做什么？如果是开启手机通知，confirm的时候自动弹可以吗？
+  

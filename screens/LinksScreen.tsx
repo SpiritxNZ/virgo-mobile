@@ -4,7 +4,7 @@ import { Text, Button, Layout } from "react-native-ui-kitten";
 import RoundBorder from "../components/layout/RoundBorder";
 import BottomBar from "../components/BottomBar";
 
-class LinksScreen extends Component {
+class LinksScreen extends Component<any, any> {
   static navigationOptions = {
     header: null
   };
