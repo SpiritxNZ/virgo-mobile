@@ -10,46 +10,14 @@ import {
 import StyledTitle from "../../components/StyledTitle";
 import { connect } from "react-redux";
 import { localeList } from "../../constants/locale/setting";
-import { setLocale } from "../../action/index";
-import { Notifications } from "expo";
-import * as Permissions from "expo-permissions";
+import { setLocale } from "../../redux/action/localeActions";
 import { withTranslation } from "react-i18next";
 import i18next from "i18next";
 import MarginTop from "../../components/layout/MarginTop";
+import { AppState } from "../../redux/reducer/index";
 
 class LocaleScreen extends Component<any, any> {
-  registerForPushNotificationsAsync = async () => {
-    const { status: existingStatus } = await Permissions.getAsync(
-      Permissions.NOTIFICATIONS
-    );
-    let finalStatus = existingStatus;
-    if (existingStatus !== "granted") {
-      const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
-      finalStatus = status;
-    }
-    if (finalStatus !== "granted") {
-      return;
-    }
-    const token = await Notifications.getExpoPushTokenAsync();
-
-    // return fetch(PUSH_ENDPOINT, {
-    //   method: 'POST',
-    //   headers: {
-    //     Accept: 'application/json',
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({
-    //     token: {
-    //       value: token,
-    //     },
-    //     user: {
-    //       username: 'Brent',
-    //     },
-    //   }),
-    // });
-  };
-
-  radioOnChange = index => {
+  radioOnChange = (index: number) => {
     this.props.setLocale(index);
     if (index === 0) {
       i18next.changeLanguage("en");
@@ -61,7 +29,6 @@ class LocaleScreen extends Component<any, any> {
   };
 
   componentDidMount = () => {
-    this.registerForPushNotificationsAsync();
     console.log(this.props);
   };
 
@@ -127,15 +94,15 @@ const styles = StyleSheet.create({
   }
 });
 
-const mapStateToProps = state => {
+const mapStateToProps = (state: AppState) => {
   return { localeIndex: state.localeReducer.localeIndex };
 };
 
-const mapDispatchToProps = dispatch => ({
-  setLocale: index => {
-    dispatch(setLocale(index));
-  }
-});
+const mapDispatchToProps = {
+  setLocale
+};
+
+// export type ReduxType = ReturnType<typeof mapStateToProps>;
 
 export default withTranslation()(
   connect(mapStateToProps, mapDispatchToProps)(LocaleScreen)
