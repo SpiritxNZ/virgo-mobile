@@ -1,12 +1,11 @@
 import React from 'react';
 import {TouchableHighlight} from 'react-native';
-import {Avatar} from 'react-native-ui-kitten';
-import Row from '../../components/layout/Row';
+import {Avatar, Layout} from 'react-native-ui-kitten';
 import styles from '../../style';
 
 const HomeImageRow = props => {
   return (
-    <Row style={[props.style, styles.homeImageRow]}>
+    <Layout style={[props.style, styles.homeImageRow, styles.row]}>
       <TouchableHighlight
         onPress={() => {
           props.navigation.navigate('Links');
@@ -62,7 +61,7 @@ const HomeImageRow = props => {
           }}
         />
       </TouchableHighlight>
-    </Row>
+    </Layout>
   );
 };
 

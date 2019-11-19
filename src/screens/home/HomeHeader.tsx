@@ -1,16 +1,15 @@
 import React from 'react';
 import {Layout, Button} from 'react-native-ui-kitten';
-import Row from '../../components/layout/Row';
 import styles from '../../style';
 
 const HomeHeader = props => {
   return (
-    <Row style={[props.style, styles.homeHeader]}>
+    <Layout style={[props.style, styles.homeHeader, styles.row]}>
       <Button size="small">Order</Button>
       <Layout style={styles.homeHeaderHorizontalBar}></Layout>
       <Button size="small">Details</Button>
       <Button size="small">Notification</Button>
-    </Row>
+    </Layout>
   );
 };
 

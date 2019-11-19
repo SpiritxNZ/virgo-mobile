@@ -13,7 +13,6 @@ import {localeList} from '../../constants/locale/setting';
 import {setLocale} from '../../redux/actions/localeActions';
 import {withTranslation} from 'react-i18next';
 import i18next from 'i18next';
-import MarginTop from '../../components/layout/MarginTop';
 import {AppState} from '../../redux/reducers/index';
 import styles from '../../style';
 
@@ -36,7 +35,7 @@ class LocaleScreen extends Component<any, any> {
   render() {
     const {t} = this.props;
     return (
-      <MarginTop style={styles.localeContainer}>
+      <Layout style={[styles.localeContainer, styles.marginTop]}>
         <StyledTitle title="Virgo's Resurrection" />
 
         <Layout>
@@ -66,7 +65,7 @@ class LocaleScreen extends Component<any, any> {
           }}>
           {t('confirm')}
         </Button>
-      </MarginTop>
+      </Layout>
     );
   }
 }

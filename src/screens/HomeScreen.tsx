@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import MarginTop from '../components/layout/MarginTop';
 import HomeHeader from './home/HomeHeader';
 import HomeImageRow from './home/HomeImageRow';
 import HomeSwiper from './home/HomeSwiper';
 import BottomBar from '../components/BottomBar';
 import styles from '../style';
+import {Layout} from 'react-native-ui-kitten';
 
 class HomeScreen extends Component {
   static navigationOptions = {
@@ -14,11 +14,11 @@ class HomeScreen extends Component {
   render() {
     return (
       <BottomBar>
-        <MarginTop style={styles.homeContainer}>
+        <Layout style={[styles.homeContainer, styles.marginTop]}>
           <HomeHeader />
           <HomeImageRow {...this.props} />
           <HomeSwiper {...this.props} style={styles.homeSwiper} />
-        </MarginTop>
+        </Layout>
       </BottomBar>
     );
   }
