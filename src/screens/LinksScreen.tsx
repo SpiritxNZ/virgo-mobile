@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {StyleSheet} from 'react-native';
 import {Text, Button} from 'react-native-ui-kitten';
-import RoundBorder from '../components/layout/RoundBorder';
+import RoundBorder from '../components/RoundBorder';
 import BottomBar from '../components/BottomBar';
 
 class LinksScreen extends Component<any, any> {
@@ -31,7 +30,5 @@ class LinksScreen extends Component<any, any> {
     );
   }
 }
-
-const styles = StyleSheet.create({});
 
 export default LinksScreen;

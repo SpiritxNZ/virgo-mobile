@@ -1,37 +1,27 @@
-import React, { Component } from "react";
-import { StyleSheet } from "react-native";
-import MarginTop from "../components/layout/MarginTop";
-import HomeHeader from "./home/HomeHeader";
-import HomeImageRow from "./home/HomeImageRow";
-import HomeSwiper from "./home/HomeSwiper";
-import BottomBar from "../components/BottomBar";
+import React, {Component} from 'react';
+import MarginTop from '../components/layout/MarginTop';
+import HomeHeader from './home/HomeHeader';
+import HomeImageRow from './home/HomeImageRow';
+import HomeSwiper from './home/HomeSwiper';
+import BottomBar from '../components/BottomBar';
+import styles from '../style';
 
 class HomeScreen extends Component {
   static navigationOptions = {
-    header: null
+    header: null,
   };
 
   render() {
     return (
       <BottomBar>
-        <MarginTop style={styles.container}>
+        <MarginTop style={styles.homeContainer}>
           <HomeHeader />
           <HomeImageRow {...this.props} />
-          <HomeSwiper {...this.props} style={styles.swiper} />
+          <HomeSwiper {...this.props} style={styles.homeSwiper} />
         </MarginTop>
       </BottomBar>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    paddingVertical: 8,
-    paddingHorizontal: 12
-  },
-  swiper: {
-    marginTop: 10
-  }
-});
 
 export default HomeScreen;

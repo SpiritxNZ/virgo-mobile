@@ -1,25 +1,12 @@
-import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import React from 'react';
+import {Layout, Text} from 'react-native-ui-kitten';
+import styles from '../style';
 
 export default function StyledTitle(props) {
   return (
-    <View>
-      <Text style={styles.label}>{props.title}</Text>
-      <View style={styles.line}></View>
-    </View>
+    <Layout>
+      <Text style={styles.styledTitleLabel}>{props.title}</Text>
+      <Layout style={styles.styledTitleLine}></Layout>
+    </Layout>
   );
 }
-
-const styles = StyleSheet.create({
-  label: {
-    fontSize: 22,
-    textAlign: "center",
-    fontWeight: "300"
-  },
-  line: {
-    marginTop: 15,
-    borderBottomColor: "black",
-    borderBottomWidth: 2,
-    width: "100%"
-  }
-});
