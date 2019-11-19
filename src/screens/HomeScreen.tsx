@@ -4,6 +4,7 @@ import HomeImageRow from './home/HomeImageRow';
 import HomeSwiper from './home/HomeSwiper';
 import BottomBar from '../components/BottomBar';
 import styles from '../style';
+import {View} from 'react-native';
 import {Layout} from 'react-native-ui-kitten';
 
 class HomeScreen extends Component {

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {Text, Button} from 'react-native-ui-kitten';
 import RoundBorder from '../components/RoundBorder';
 import BottomBar from '../components/BottomBar';
+import {Text, Button} from 'react-native-ui-kitten';
 
 class LinksScreen extends Component<any, any> {
   static navigationOptions = {

@@ -2,6 +2,20 @@ import {StyleSheet} from 'react-native';
 import layout from './constants/Layout';
 
 const styles = StyleSheet.create({
+  row: {
+    flexDirection: 'row',
+  },
+  marginTop: {
+    marginTop: 30,
+  },
+  roundBorder: {
+    marginHorizontal: 20,
+    paddingHorizontal: 16,
+    paddingVertical: 30,
+    borderColor: 'black',
+    borderWidth: 2,
+    borderRadius: 8,
+  },
   localeContainer: {
     marginHorizontal: 44,
   },
@@ -56,20 +70,6 @@ const styles = StyleSheet.create({
   homeSwiperimageButton: {
     width: layout.window.width - 24,
     flex: 1,
-  },
-  row: {
-    flexDirection: 'row',
-  },
-  marginTop: {
-    marginTop: 30,
-  },
-  roundBorder: {
-    marginHorizontal: 20,
-    paddingHorizontal: 16,
-    paddingVertical: 30,
-    borderColor: 'black',
-    borderWidth: 2,
-    borderRadius: 8,
   },
   bottomBarContainer: {
     position: 'absolute',
