@@ -4,7 +4,6 @@ import {Layout, Avatar} from 'react-native-ui-kitten';
 import styles from '../style';
 
 const RoundImageButton = props => {
-  console.log(props);
   return (
     <Layout>
       <TouchableWithoutFeedback

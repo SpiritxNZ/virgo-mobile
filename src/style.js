@@ -14,6 +14,9 @@ const styles = StyleSheet.create({
   regularMarginTop: {
     marginTop: 10,
   },
+  spaceBetween: {
+    justifyContent: 'space-between',
+  },
   roundBorder: {
     marginHorizontal: 20,
     paddingHorizontal: 16,
@@ -119,6 +122,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#222',
     elevation: 3,
     opacity: 0.7,
+  },
+  policySwitchTextContainer: {
+    width: '80%',
   },
 });
 
