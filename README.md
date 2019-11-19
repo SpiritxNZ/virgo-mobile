@@ -22,15 +22,15 @@
 
 存放导航组件
 
-### screen
+### screens
 
 存放有状态的组件
 
-### action
+### redux/action
 
 存放redux的action
 
-### reducer
+### redux/reducer
 
 存放redux的reducer
 
@@ -47,7 +47,7 @@
 这是一个用expo管理的react native项目，不要使用expo不支持的react native插件。状态管理尽量用redux。新加插件时在下面列出
   
 用到的其他react插件：
-  redux, react-redux, moment, redux-logger, redux-thunk, react-i18next, i18next,
+  redux, react-redux, moment, redux-logger, redux-thunk, react-i18next, i18next
 
 用到的其他react-native插件：
   react-native-ui-kitten, react-native-swiper, react-navigation
@@ -59,5 +59,4 @@
 ## todos
 
 下面两个按钮
-
   
