@@ -4,6 +4,7 @@ import BottomBar from '../components/BottomBar';
 import {Text, Button} from 'react-native-ui-kitten';
 import PaymentProgressBar from '../components/PaymentProgressBar';
 import PolicySwitch from '../components/PolicySwitch';
+import SmallRoundBorder from '../components/SmallRoundBorder';
 
 class LinksScreen extends Component<any, any> {
   static navigationOptions = {
@@ -47,6 +48,9 @@ class LinksScreen extends Component<any, any> {
             toggleOnChange={checked =>
               this.toggleOnChange(checked)
             }></PolicySwitch>
+          <SmallRoundBorder>
+            <Text>$5.00NZD</Text>
+          </SmallRoundBorder>
         </RoundBorder>
       </BottomBar>
     );

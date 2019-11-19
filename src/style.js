@@ -22,8 +22,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 30,
     borderColor: 'black',
-    borderWidth: 2,
+    borderWidth: 1,
     borderRadius: 8,
+  },
+  smallRoundBorderContainer: {
+    paddingHorizontal: 6,
+    paddingVertical: 10,
+    borderColor: 'black',
+    borderWidth: 1,
+    borderRadius: 8,
+    justifyContent: 'center',
   },
   localeContainer: {
     marginHorizontal: 44,
