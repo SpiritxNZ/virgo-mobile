@@ -6,7 +6,7 @@ import styles from '../../style';
 
 const HomeSwiper = props => {
   return (
-    <Layout style={[props.style, styles.homeSwiper]}>
+    <Layout style={[props.style, styles.regularMarginTop]}>
       <Swiper autoplay showsPagination={false}>
         <Layout style={styles.homeSwiperSlide}>
           <TouchableHighlight

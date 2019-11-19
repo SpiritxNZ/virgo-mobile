@@ -15,10 +15,10 @@ class HomeScreen extends Component {
   render() {
     return (
       <BottomBar>
-        <Layout style={[styles.homeContainer, styles.marginTop]}>
-          <HomeHeader />
+        <Layout style={[styles.homeContainer, styles.hugeMarginTop]}>
+          <HomeHeader {...this.props} />
           <HomeImageRow {...this.props} />
-          <HomeSwiper {...this.props} style={styles.homeSwiper} />
+          <HomeSwiper {...this.props} />
         </Layout>
       </BottomBar>
     );

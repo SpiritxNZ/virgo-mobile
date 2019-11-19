@@ -4,7 +4,7 @@ import styles from '../style';
 
 const RoundBorder = props => {
   return (
-    <Layout style={styles.marginTop}>
+    <Layout style={styles.hugeMarginTop}>
       <Layout style={styles.roundBorder}>{props.children}</Layout>
     </Layout>
   );

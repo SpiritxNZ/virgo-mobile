@@ -5,8 +5,14 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
   },
-  marginTop: {
+  rowReverse: {
+    flexDirection: 'row-reverse',
+  },
+  hugeMarginTop: {
     marginTop: 30,
+  },
+  regularMarginTop: {
+    marginTop: 10,
   },
   roundBorder: {
     marginHorizontal: 20,
@@ -39,9 +45,6 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 12,
   },
-  homeSwiper: {
-    marginTop: 10,
-  },
   homeHeader: {
     justifyContent: 'space-between',
   },
@@ -56,8 +59,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   homeImageRowItem: {
-    width: 62,
-    height: 62,
+    width: 60,
+    height: 60,
   },
   homeSwiper: {
     height: 450,

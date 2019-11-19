@@ -28,14 +28,12 @@ class LocaleScreen extends Component<any, any> {
     }
   };
 
-  componentDidMount = () => {
-    console.log(this.props);
-  };
+  componentDidMount = () => {};
 
   render() {
     const {t} = this.props;
     return (
-      <Layout style={[styles.localeContainer, styles.marginTop]}>
+      <Layout style={[styles.localeContainer, styles.hugeMarginTop]}>
         <StyledTitle title="Virgo's Resurrection" />
 
         <Layout>
