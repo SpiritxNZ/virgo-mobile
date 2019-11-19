@@ -10,11 +10,11 @@ class LoginScreen extends Component {
     password: '',
   };
 
-  onChangeEmail = Email => {
+  onChangeEmail = (Email: string) => {
     this.setState({Email});
   };
 
-  onChangePassword = password => {
+  onChangePassword = (password: string) => {
     this.setState({password});
   };
 

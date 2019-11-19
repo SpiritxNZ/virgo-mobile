@@ -93,6 +93,33 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     width: '100%',
   },
+  paymentProgressBarContainer: {
+    position: 'relative',
+    justifyContent: 'space-between',
+  },
+  paymentProgressBar: {
+    position: 'absolute',
+    top: '50%',
+    height: 2,
+    width: '100%',
+    backgroundColor: '#ccc',
+    elevation: 1,
+  },
+  paymentProgressBarText: {
+    elevation: 2,
+    color: '#555',
+  },
+  paymentProgressBarCircle: {
+    position: 'absolute',
+    top: '18%',
+    left: '85%',
+    width: 16,
+    height: 16,
+    borderRadius: 8,
+    backgroundColor: '#222',
+    elevation: 3,
+    opacity: 0.7,
+  },
 });
 
 export default styles;

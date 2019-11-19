@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import RoundBorder from '../components/RoundBorder';
 import BottomBar from '../components/BottomBar';
 import {Text, Button} from 'react-native-ui-kitten';
+import PaymentProgressBar from '../components/PaymentProgressBar';
 
 class LinksScreen extends Component<any, any> {
   static navigationOptions = {
@@ -25,6 +26,7 @@ class LinksScreen extends Component<any, any> {
             }}>
             Home
           </Button>
+          <PaymentProgressBar index={4}></PaymentProgressBar>
         </RoundBorder>
       </BottomBar>
     );
