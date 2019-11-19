@@ -5,6 +5,7 @@ import {Text, Button} from 'react-native-ui-kitten';
 import PaymentProgressBar from '../components/PaymentProgressBar';
 import PolicySwitch from '../components/PolicySwitch';
 import SmallRoundBorder from '../components/SmallRoundBorder';
+import RadioTextLeft from '../components/RadioTextLeft';
 
 class LinksScreen extends Component<any, any> {
   static navigationOptions = {
@@ -42,7 +43,7 @@ class LinksScreen extends Component<any, any> {
             }}>
             Home
           </Button>
-          <PaymentProgressBar index={4}></PaymentProgressBar>
+          <PaymentProgressBar index={4} />
           <PolicySwitch
             checked={checked}
             toggleOnChange={checked =>
@@ -51,6 +52,7 @@ class LinksScreen extends Component<any, any> {
           <SmallRoundBorder>
             <Text>$5.00NZD</Text>
           </SmallRoundBorder>
+          <RadioTextLeft />
         </RoundBorder>
       </BottomBar>
     );
