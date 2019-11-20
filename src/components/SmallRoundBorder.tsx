@@ -1,8 +1,19 @@
 import React from 'react';
-import {Layout, Text} from 'react-native-ui-kitten';
+import {Layout, LayoutProps} from 'react-native-ui-kitten';
 import styles from '../style';
 
-const SmallRoundBorder = props => {
+interface ISmallRoundBorderProps {
+  children: React.ReactNode;
+  style?: LayoutProps;
+}
+
+/**
+ * A small round border component with text inside
+ *
+ * @param {ISmallRoundBorderProps} props
+ * @returns
+ */
+const SmallRoundBorder = (props: ISmallRoundBorderProps) => {
   return (
     <Layout
       style={[

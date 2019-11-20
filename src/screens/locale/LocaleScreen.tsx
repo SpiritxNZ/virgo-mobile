@@ -7,7 +7,7 @@ import {
   Button,
   Layout,
 } from 'react-native-ui-kitten';
-import StyledTitle from '../../components/StyledTitle';
+import StyledBar from '../../components/StyledBar';
 import {connect} from 'react-redux';
 import {localeList} from '../../constants/locale/setting';
 import {setLocale} from '../../redux/actions/localeActions';
@@ -28,14 +28,13 @@ class LocaleScreen extends Component<any, any> {
     }
   };
 
-  componentDidMount = () => {};
-
   render() {
     const {t} = this.props;
     return (
       <Layout style={[styles.localeContainer, styles.hugeMarginTop]}>
-        <StyledTitle title="Virgo's Resurrection" />
-
+        <StyledBar>
+          <Text style={styles.styledBarLabel}>Virgo's Resurrection</Text>
+        </StyledBar>
         <Layout>
           <Text style={styles.localeText}>{t('localePage.cl')}</Text>
         </Layout>

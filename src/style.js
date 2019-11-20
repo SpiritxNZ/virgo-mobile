@@ -93,12 +93,12 @@ const styles = StyleSheet.create({
   bottomBarButton: {
     width: '50%',
   },
-  styledTitleLabel: {
+  styledBarLabel: {
     fontSize: 22,
     textAlign: 'center',
     fontWeight: '300',
   },
-  styledTitleLine: {
+  styledBarLine: {
     marginTop: 15,
     borderBottomColor: 'black',
     borderBottomWidth: 2,

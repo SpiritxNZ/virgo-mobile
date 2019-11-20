@@ -3,7 +3,17 @@ import {Layout} from 'react-native-ui-kitten';
 import styles from '../style';
 import {StyleSheet} from 'react-native';
 
-const PaymentProgressBarCircle = (props: any) => {
+interface IPaymentProgressBarCircleProps {
+  index: number;
+}
+
+/**
+ * Used with PaymentProgressBar, display when delivery index equal to index of component in the array
+ *
+ * @param {IPaymentProgressBarCircleProps} props
+ * @returns
+ */
+const PaymentProgressBarCircle = (props: IPaymentProgressBarCircleProps) => {
   if (props.index === 1) {
     return (
       <Layout

@@ -1,8 +1,20 @@
 import React from 'react';
-import {Layout, Text} from 'react-native-ui-kitten';
+
+import {Layout, Text, TextProps} from 'react-native-ui-kitten';
 import styles from '../style';
 
-const DeliveryProgressBarActive = props => {
+interface IDeliveryProgressBarActiveProps {
+  text: string;
+  style?: TextProps;
+}
+
+/**
+ * Used with DeliveryProgressBar, display active style when delivery index equal to index of component in the array
+ *
+ * @param {IDeliveryProgressBarActiveProps} props
+ * @returns
+ */
+const DeliveryProgressBarActive = (props: IDeliveryProgressBarActiveProps) => {
   return (
     <Layout>
       <Layout style={styles.deliveryProgressBarIndicator}></Layout>

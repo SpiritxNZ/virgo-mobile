@@ -3,7 +3,17 @@ import {Layout, Text} from 'react-native-ui-kitten';
 import styles from '../style';
 import DeliveryProgressBarActive from './DeliveryProgressBarActive';
 
-const DeliveryProgressBar = (props: any) => {
+interface IDeliveryProgressBarProps {
+  index: number;
+}
+
+/**
+ * A bar which display delivery progress
+ *
+ * @param {IDeliveryProgressBarProps} props
+ * @returns
+ */
+const DeliveryProgressBar = (props: IDeliveryProgressBarProps) => {
   const dataList = [
     '订单已生成',
     '到达驿站',

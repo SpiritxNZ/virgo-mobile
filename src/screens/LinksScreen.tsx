@@ -22,7 +22,6 @@ class LinksScreen extends Component<any, any> {
   };
 
   toggleOnChange = (checked: boolean) => {
-    console.log(checked);
     this.setState({checked});
   };
 
@@ -53,7 +52,7 @@ class LinksScreen extends Component<any, any> {
           <SmallRoundBorder>
             <Text>$5.00NZD</Text>
           </SmallRoundBorder>
-          <RadioTextLeft />
+          <RadioTextLeft text="this is a text" checked />
           <DeliveryProgressBar index={2} />
         </RoundBorder>
       </BottomBarContainer>

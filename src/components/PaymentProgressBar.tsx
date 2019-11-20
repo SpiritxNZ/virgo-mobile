@@ -3,7 +3,18 @@ import {Layout, Text} from 'react-native-ui-kitten';
 import styles from '../style';
 import PaymentProgressBarCircle from './PaymentProgressBarCircle';
 
-const PaymentProgressBar = (props: any) => {
+interface IPaymentProgressBarProps {
+  index: number;
+}
+
+/**
+ * A bar which display payment progress
+ *
+ * @param {IPaymentProgressBarProps} props
+ * @returns
+ */
+
+const PaymentProgressBar = (props: IPaymentProgressBarProps) => {
   return (
     <Layout
       style={[
