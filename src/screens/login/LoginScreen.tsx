@@ -53,7 +53,7 @@ class LoginScreen extends Component {
         <Button
           style={styles.regularMarginTop}
           onPress={() => {
-            (this.props as any).navigation.navigate('Home');
+            (this.props as any).navigation.navigate('CreateAccount');
           }}>
           Create Account
         </Button>

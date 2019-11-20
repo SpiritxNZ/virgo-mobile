@@ -134,6 +134,31 @@ const styles = StyleSheet.create({
   policySwitchTextContainer: {
     width: '80%',
   },
+  deliveryProgressBarContainer: {
+    position: 'relative',
+  },
+  deliveryProgressBarText: {
+    fontSize: 12,
+    color: '#999',
+  },
+  deliveryProgressBar: {
+    position: 'absolute',
+    top: '50%',
+    height: 3,
+    width: '100%',
+    backgroundColor: 'black',
+  },
+  deliveryProgressBarTextActive: {
+    fontSize: 12,
+  },
+  deliveryProgressBarIndicator: {
+    position: 'absolute',
+    top: '36%',
+    left: '40%',
+    height: 16,
+    width: 10,
+    backgroundColor: 'black',
+  },
 });
 
 export default styles;

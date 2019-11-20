@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import RoundBorder from '../components/RoundBorder';
-import BottomBar from '../components/BottomBar';
+import BottomBarContainer from '../components/BottomBarContainer';
 import {Text, Button} from 'react-native-ui-kitten';
 import PaymentProgressBar from '../components/PaymentProgressBar';
 import PolicySwitch from '../components/PolicySwitch';
 import SmallRoundBorder from '../components/SmallRoundBorder';
 import RadioTextLeft from '../components/RadioTextLeft';
+import DeliveryProgressBar from '../components/DeliveryProgressBar';
 
 class LinksScreen extends Component<any, any> {
   static navigationOptions = {
@@ -28,7 +29,7 @@ class LinksScreen extends Component<any, any> {
   render() {
     const {checked} = this.state;
     return (
-      <BottomBar>
+      <BottomBarContainer>
         <RoundBorder>
           <Text>Links</Text>
           <Button
@@ -53,8 +54,9 @@ class LinksScreen extends Component<any, any> {
             <Text>$5.00NZD</Text>
           </SmallRoundBorder>
           <RadioTextLeft />
+          <DeliveryProgressBar index={2} />
         </RoundBorder>
-      </BottomBar>
+      </BottomBarContainer>
     );
   }
 }

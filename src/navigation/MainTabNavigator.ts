@@ -2,20 +2,29 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import LoginScreen from '../screens/login/LoginScreen';
 import {createStackNavigator} from 'react-navigation-stack';
+import CreateAccountScreen from '../screens/login/CreateAccountScreen';
 
-const MainTabNavigator = createStackNavigator({
-  Home: {
-    screen: HomeScreen,
-    navigationOptions: {header: null},
+const MainTabNavigator = createStackNavigator(
+  {
+    Home: {
+      screen: HomeScreen,
+    },
+    Links: {
+      screen: LinksScreen,
+    },
+    Login: {
+      screen: LoginScreen,
+    },
+    CreateAccount: {
+      screen: CreateAccountScreen,
+    },
   },
-  Links: {
-    screen: LinksScreen,
-    navigationOptions: {header: null},
+  {
+    headerMode: 'none',
+    navigationOptions: {
+      headerVisible: false,
+    },
   },
-  Login: {
-    screen: LoginScreen,
-    navigationOptions: {header: null},
-  },
-});
+);
 
 export default MainTabNavigator;
