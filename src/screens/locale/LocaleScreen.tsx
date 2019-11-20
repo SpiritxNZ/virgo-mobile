@@ -87,8 +87,6 @@ const mapDispatchToProps = {
   setLocale,
 };
 
-// export type ReduxType = ReturnType<typeof mapStateToProps>;
-
 export default withTranslation()(
   connect(mapStateToProps, mapDispatchToProps)(LocaleScreen),
 );
