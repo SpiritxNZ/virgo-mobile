@@ -10,13 +10,25 @@ import {
 import StyledBar from '../../components/StyledBar';
 import {connect} from 'react-redux';
 import {localeList} from '../../constants/locale/setting';
-import {setLocale} from '../../redux/actions/localeActions';
-import {withTranslation} from 'react-i18next';
+import {setLocale, ISetLocale} from '../../redux/actions/localeActions';
+import {withTranslation, WithTranslation} from 'react-i18next';
 import i18next from 'i18next';
 import {AppState} from '../../redux/reducers/index';
 import styles from '../../style';
+import {
+  NavigationParams,
+  NavigationScreenProp,
+  NavigationState,
+} from 'react-navigation';
 
-class LocaleScreen extends Component<any, any> {
+interface IProps extends WithTranslation {
+  localeIndex: number;
+  navigation: NavigationScreenProp<NavigationState, NavigationParams>;
+  setLocale: (index: number) => ISetLocale;
+  screenProps?: any;
+}
+
+class LocaleScreen extends Component<IProps, null> {
   radioOnChange = (index: number) => {
     this.props.setLocale(index);
     if (index === 0) {

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import {Layout, Text, TextProps} from 'react-native-ui-kitten';
+import {Layout, Text} from 'react-native-ui-kitten';
 import styles from '../style';
 
 interface IDeliveryProgressBarActiveProps {
   text: string;
-  style?: TextProps;
+  style?: any;
 }
 
 /**

@@ -5,7 +5,7 @@ import styles from '../style';
 interface IRadioTextLeftProps {
   text: string;
   checked: boolean;
-  style?: LayoutProps;
+  style?: any;
 }
 
 /**

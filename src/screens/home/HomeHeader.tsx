@@ -8,7 +8,6 @@ const HomeHeader = props => {
       <Button
         size="small"
         onPress={() => {
-          console.log(props);
           props.navigation.navigate('Login');
         }}>
         Order

@@ -10,7 +10,7 @@ import {
 
 interface IRoundImageButtonProps {
   dest: string;
-  style: AvatarProps;
+  style: any;
   navigation: NavigationScreenProp<NavigationState, NavigationParams>;
   source: ImageSourcePropType;
   screenProps?: any;

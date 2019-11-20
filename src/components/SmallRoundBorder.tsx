@@ -4,7 +4,7 @@ import styles from '../style';
 
 interface ISmallRoundBorderProps {
   children: React.ReactNode;
-  style?: LayoutProps;
+  style?: any;
 }
 
 /**

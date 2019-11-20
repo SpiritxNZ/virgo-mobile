@@ -7,7 +7,7 @@ interface ITextButtonProps {
   onPress: () => void;
   underline?: boolean;
   children?: React.ReactNode;
-  style?: LayoutProps;
+  style?: any;
 }
 
 /**
