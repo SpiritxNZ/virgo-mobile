@@ -3,6 +3,7 @@ import LinksScreen from '../screens/LinksScreen';
 import LoginScreen from '../screens/login/LoginScreen';
 import {createStackNavigator} from 'react-navigation-stack';
 import CreateAccountScreen from '../screens/login/CreateAccountScreen';
+import StoreHomeScreen from '../screens/store/StoreHomeScreen';
 
 const MainTabNavigator = createStackNavigator(
   {
@@ -17,6 +18,9 @@ const MainTabNavigator = createStackNavigator(
     },
     CreateAccount: {
       screen: CreateAccountScreen,
+    },
+    StoreHome: {
+      screen: StoreHomeScreen,
     },
   },
   {

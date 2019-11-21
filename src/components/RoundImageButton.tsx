@@ -1,7 +1,7 @@
 import React from 'react';
 import {TouchableWithoutFeedback} from 'react-native';
 import {ImageSourcePropType} from 'react-native';
-import {Layout, Avatar, AvatarProps} from 'react-native-ui-kitten';
+import {Layout, Avatar} from 'react-native-ui-kitten';
 import {
   NavigationParams,
   NavigationScreenProp,

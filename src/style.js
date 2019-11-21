@@ -2,6 +2,10 @@ import {StyleSheet} from 'react-native';
 import layout from './constants/Layout';
 
 const styles = StyleSheet.create({
+  regularContainer: {
+    marginHorizontal: 15,
+    marginVertical: 30,
+  },
   row: {
     flexDirection: 'row',
   },
@@ -13,6 +17,12 @@ const styles = StyleSheet.create({
   },
   regularMarginTop: {
     marginTop: 10,
+  },
+  hugeMarginLeft: {
+    marginLeft: 30,
+  },
+  regularMarginLeft: {
+    marginLeft: 10,
   },
   spaceBetween: {
     justifyContent: 'space-between',
@@ -158,6 +168,37 @@ const styles = StyleSheet.create({
     height: 16,
     width: 10,
     backgroundColor: 'black',
+  },
+  storeHomeItemContainer: {
+    width: '50%',
+    alignItems: 'center',
+    borderWidth: 1,
+  },
+  storeHomeItemImage: {
+    width: 160,
+    height: 160,
+  },
+  storeHomeItemOriginalPrice: {
+    textDecorationLine: 'line-through',
+  },
+  storeHomeContainer: {
+    flexWrap: 'wrap',
+  },
+  storeCartItemImage: {
+    width: 130,
+    height: 168,
+  },
+  storeCartItemContent: {
+    justifyContent: 'space-between',
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    paddingVertical: 10,
+  },
+  storeCartItemContentDescription: {
+    width: '50%',
+  },
+  storeCartItemContentDescriptionStock: {
+    color: '#666',
   },
 });
 

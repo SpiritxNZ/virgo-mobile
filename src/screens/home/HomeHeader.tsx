@@ -13,7 +13,13 @@ const HomeHeader = props => {
         Order
       </Button>
       <Layout style={styles.homeHeaderHorizontalBar}></Layout>
-      <Button size="small">Details</Button>
+      <Button
+        size="small"
+        onPress={() => {
+          props.navigation.navigate('StoreHome');
+        }}>
+        Details
+      </Button>
       <Button size="small">Notification</Button>
     </Layout>
   );
