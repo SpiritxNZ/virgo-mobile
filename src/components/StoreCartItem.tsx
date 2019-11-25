@@ -1,7 +1,20 @@
 import React from 'react';
-import {Image} from 'react-native';
+import {Image, ImageSourcePropType} from 'react-native';
 import {Layout, Text, Radio} from 'react-native-ui-kitten';
 import styles from '../style';
+
+interface IStoreCartItemProps {
+  source: ImageSourcePropType;
+  stock: number;
+  brand: string;
+  color: string;
+  size: string;
+  condition: string;
+  originalPrice: number;
+  checked: boolean;
+  onSale?: boolean;
+  reducedPrice?: number;
+}
 
 const StoreCartItem = props => {
   return (
